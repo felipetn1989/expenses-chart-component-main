@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
   
   <title>Frontend Mentor | Expenses chart component</title>
 
@@ -24,17 +24,16 @@
   <main class="bg-[#fffaf5] text-[#382314] px-5 py-6 tracking-tight">
     <h1 class="font-bold text-[1.3125rem]">Spending - Last 7 days</h1>
 
-    <div id="chart">
-    </div>
+    <div id="chart" class="flex gap-3 justify-center items-end mt-[3.3125rem] mb-6"></div>
 
-    <div class="flex justify-between border-t-2 border-[#f8e9dd] pt-4">
-      <div class="flex flex-col">
-        <span class="text-[#93867b]">Total this month</span>
-        <span class="font-bold text-3xl">$478.33</span>
+    <div class="flex justify-between border-t-2 border-[#f8e9dd] pt-[1.4375rem]">
+      <div class="flex flex-col gap-1">
+        <span class="text-[#93867b] tracking-tighter text-[0.9375rem]">Total this month</span>
+        <span class="font-bold text-[1.625rem]">$478.33</span>
       </div>
       <div class="flex flex-col self-end">
-        <span class="font-bold">+2.4%</span>
-        <span class="text-[#93867b]">from last month</span>
+        <span class="font-bold self-end text-sm tracking-tighter">+2.4%</span>
+        <span class="text-[#93867b] text-[0.9375rem] tracking-tighter">from last month</span>
       </div>
     </div>
   </main>
