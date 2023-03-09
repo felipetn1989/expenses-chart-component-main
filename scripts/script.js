@@ -3,7 +3,7 @@ let day = new Date().getDay(); //getting the day of the week to display the corr
 // creating an async function to display the JSON data in the page
 
 async function insertChart() {
-  const response = await fetch("../data.json");
+  const response = await fetch("data.json");
   const text = await response.text();
   const data = JSON.parse(text);
 
