@@ -1,9 +1,13 @@
+let day = new Date().getDay(); //getting the day of the week to display the corresponding bar in a different color
+
+// creating an async function to display the JSON data in the page
+
 async function insertChart() {
   const response = await fetch("../data.json");
   const text = await response.text();
   const data = JSON.parse(text);
 
-  let maxExpense = data.reduce((max, obj) => Math.max(max, obj.amount), 0);
+  let maxExpense = data.reduce((max, obj) => Math.max(max, obj.amount), 0); // retrieving the maximum value of the daily expenses to use it as the scale parameter for the bar heights
 
   for (let i = 0; i < data.length; i++) {
     chart.innerHTML += `
@@ -16,34 +20,30 @@ async function insertChart() {
         ${data[i].day}
       </span>
     </div>
-  `;
+  `; //creating the bars and corresponding labels dinamically
   }
 
   const chartBars = document.querySelectorAll(".chart_bar");
 
   chartBars.forEach((bar, index) => {
-    bar.style.height = `${9.1875 * (data[index].amount / maxExpense)}rem`;
-  });
-
-  chartBars.forEach((bar, index) => {
-    const expenseBoxes = document.querySelectorAll(".expense_box");
+    bar.style.height = `${9.1875 * (data[index].amount / maxExpense)}rem`; // the bar heights follow a scale in which the largest expense corresponds to 100% height and the other percentages are calculated in relation to the maxExpense; the base height is 9.1875rem
     bar.addEventListener("mouseenter", () => {
-      if (!expenseBoxes[index].classList.contains("fixed_box")) {
-        displayExpenseBoxes(index);
-      }
+      displayExpenseBoxes(index);
     });
     bar.addEventListener("mouseout", () => {
-      if (!expenseBoxes[index].classList.contains("fixed_box")) {
-        displayExpenseBoxes(index);
-      }
-    });
+      displayExpenseBoxes(index);
+    }); // adding hover events
+    if (index === day - 1) {
+      bar.classList.remove("bg-[#ec775f]");
+      bar.style.backgroundColor = "#76b5bc"; //changing the current day bar's color
+    }
   });
 }
 
 function displayExpenseBoxes(i) {
   const expenseBoxes = document.querySelectorAll(".expense_box");
   expenseBoxes[i].classList.toggle("hidden");
-  expenseBoxes[i].classList.toggle("absolute");
+  expenseBoxes[i].classList.toggle("absolute"); //function used in the hover events
 }
 
 insertChart();
