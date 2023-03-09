@@ -5,7 +5,7 @@ let day = new Date().getDay(); //getting the day of the week to display the corr
 async function insertChart() {
   const response = await fetch("data.json");
   const text = await response.text();
-  const data = JSON.parse(text);
+  const data = text.json();
 
   let maxExpense = data.reduce((max, obj) => Math.max(max, obj.amount), 0); // retrieving the maximum value of the daily expenses to use it as the scale parameter for the bar heights
 
