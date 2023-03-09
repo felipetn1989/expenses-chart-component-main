@@ -52,7 +52,7 @@ Users should be able to:
 
 ### What I learned
 
-For this project I used an async function with await and fetch to retrieve the data from the JSON file and input it dinamically to create the expense bars for each day of the week.
+For this project I used an async function with await and fetch to retrieve the data from the JSON file and input it dynamically to create the expense bars for each day of the week.
 
 ## Author
 
