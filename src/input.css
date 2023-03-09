@@ -22,6 +22,10 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+.fixed_box {
+  position: absolute;
+}
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;

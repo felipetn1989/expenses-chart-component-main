@@ -11,29 +11,29 @@
   <link rel="stylesheet" href="../dist/output.css">
 
 </head>
-<body class="grid gap-4 bg-[#f8e9dd] px-4 py-[4.125rem]">
+<body class="grid gap-4 bg-[#f8e9dd] px-4 py-[4.125rem] lg:place-items-center lg:gap-5">
 
-  <header class="bg-[#ec775f] text-white flex justify-between rounded-lg p-5">
+  <header class="bg-[#ec775f] text-white flex justify-between rounded-lg p-5 lg:w-[33.5rem] lg:mt-[7.25rem] lg:rounded-2xl lg:px-[1.875rem] lg:py-7">
     <div class="flex flex-col gap-1.5">
-      <span class="text-sm">My balance</span>
-      <span class="font-bold text-[1.3125rem] tracking-tighter">$921.48</span>
+      <span class="text-sm lg:text-base">My balance</span>
+      <span class="font-bold text-[1.3125rem] tracking-tighter lg:text-[1.6875rem]">$921.48</span>
     </div>
-    <img class="w-16" src="../images/logo.svg" alt="App logo">
+    <img class="w-16 lg:w-[4.6875rem] lg:translate-x-[-0.5rem]" src="../images/logo.svg" alt="App logo">
   </header>
 
-  <main class="bg-[#fffaf5] text-[#382314] px-5 py-6 tracking-tight">
-    <h1 class="font-bold text-[1.3125rem]">Spending - Last 7 days</h1>
+  <main class="bg-[#fffaf5] text-[#382314] px-5 py-6 tracking-tight lg:w-[33.5rem] lg:rounded-2xl lg:px-[2.375rem] lg:py-9">
+    <h1 class="font-bold text-[1.3125rem] lg:text-[1.6875rem] tracking-normal">Spending - Last 7 days</h1>
 
-    <div id="chart" class="flex gap-3 justify-center items-end mt-[3.3125rem] mb-6"></div>
+    <div id="chart" class="flex gap-3 justify-center items-end mt-[3.3125rem] mb-6 lg:gap-5 lg:mb-7"></div>
 
-    <div class="flex justify-between border-t-2 border-[#f8e9dd] pt-[1.4375rem]">
-      <div class="flex flex-col gap-1">
-        <span class="text-[#93867b] tracking-tighter text-[0.9375rem]">Total this month</span>
-        <span class="font-bold text-[1.625rem]">$478.33</span>
+    <div class="flex justify-between border-t-2 border-[#f8e9dd] pt-[1.4375rem] lg:pt-8">
+      <div class="flex flex-col gap-1 lg:gap-0">
+        <span class="text-[#93867b] tracking-tighter text-[0.9375rem] lg:text-lg lg:tracking-tight">Total this month</span>
+        <span class="font-bold text-[1.625rem] lg:text-[2.5rem] lg:tracking-normal">$478.33</span>
       </div>
-      <div class="flex flex-col self-end">
-        <span class="font-bold self-end text-sm tracking-tighter">+2.4%</span>
-        <span class="text-[#93867b] text-[0.9375rem] tracking-tighter">from last month</span>
+      <div class="flex flex-col self-end lg:translate-y-[-0.25rem]">
+        <span class="font-bold self-end text-sm tracking-tighter lg:text-base">+2.4%</span>
+        <span class="text-[#93867b] text-[0.9375rem] tracking-tighter lg:text-lg">from last month</span>
       </div>
     </div>
   </main>
