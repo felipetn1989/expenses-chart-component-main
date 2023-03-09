@@ -3,9 +3,9 @@ let day = new Date().getDay(); //getting the day of the week to display the corr
 // creating an async function to display the JSON data in the page
 
 async function insertChart() {
-  const response = await fetch("data.json");
+  const response = await fetch("https://api.npoint.io/98e81cbb1d573936175c");
   const text = await response.text();
-  const data = await text.json();
+  const data = await JSON.parse(text);
 
   let maxExpense = data.reduce((max, obj) => Math.max(max, obj.amount), 0); // retrieving the maximum value of the daily expenses to use it as the scale parameter for the bar heights
 
