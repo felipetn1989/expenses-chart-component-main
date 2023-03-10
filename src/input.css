@@ -34,7 +34,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
   .chart_bar {
     width: 1.5rem;
   }
