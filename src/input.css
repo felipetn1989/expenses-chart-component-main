@@ -33,3 +33,9 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (max-width: 350px) {
+  .chart_bar {
+    width: 1.5rem;
+  }
+}
